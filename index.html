@@ -1,243 +1,127 @@
 <!doctype html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Srikanth Kasula – Full‑Stack Developer (Python/Django • React)</title>
-  <meta name="description" content="Srikanth Kasula – Senior Full‑Stack Developer specializing in Python/Django, React/TypeScript, SQL, and Terraform. Modern, recruiter‑friendly portfolio with projects, resume, and contact." />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Srikanth Kasula — Full-Stack Engineer</title>
+  <meta name="description" content="Full-Stack Engineer building clean, fast products with Python/Django and React/TypeScript."/>
+  <link rel="canonical" href="https://srikanthkasula.com/"/>
+
+  <!-- Minimal, fast: Tailwind CDN + Inter -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <meta property="og:title" content="Srikanth Kasula – Full‑Stack Developer" />
-  <meta property="og:description" content="Python/Django • React/TypeScript • SQL • Terraform • AWS/Azure" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://srikasula.github.io/" />
-  <link rel="icon" href="https://fav.farm/⚡" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
   <style>
-    html, body { font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
-    .glass { @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-lg border border-white/20 dark:border-slate-700 shadow-xl; }
-    .chip { @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700; }
-    .btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-medium; }
-    .btn-primary { @apply btn text-white bg-indigo-600 hover:bg-indigo-700; }
-    .btn-ghost { @apply btn bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800; }
+    html,body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial}
+    .container{max-width:900px;margin:0 auto;padding:0 20px}
+    .link{border-bottom:1px solid #000}
+    .link:hover{opacity:.7}
+    .pill{display:inline-block;border:1px solid #e5e7eb;padding:.25rem .6rem;border-radius:9999px;font-size:.75rem}
   </style>
-  <script>
-    // simple dark mode toggle
-    const setTheme = (m) => { if(m==='dark'){document.documentElement.classList.add('dark');localStorage.theme='dark'} else {document.documentElement.classList.remove('dark');localStorage.theme='light'} }
-    const initTheme = () => { if(localStorage.theme==='dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) document.documentElement.classList.add('dark') }
-    document.addEventListener('DOMContentLoaded', initTheme)
-  </script>
 </head>
-<body class="bg-gradient-to-br from-indigo-50 via-white to-slate-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 text-slate-800 dark:text-slate-200">
-  <!-- NAV -->
-  <header class="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-slate-900/60 border-b border-slate-200/60 dark:border-slate-800">
-    <div class="mx-auto max-w-7xl px-5 py-3 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-2 font-semibold"><span class="text-xl">⚡</span> Srikanth Kasula</a>
-      <nav class="hidden md:flex items-center gap-6 text-sm">
-        <a class="hover:text-indigo-600" href="#projects">Projects</a>
-        <a class="hover:text-indigo-600" href="#skills">Skills</a>
-        <a class="hover:text-indigo-600" href="#experience">Experience</a>
-        <a class="hover:text-indigo-600" href="#contact">Contact</a>
-      </nav>
-      <div class="flex items-center gap-2">
-        <button class="btn-ghost" onclick="setTheme(document.documentElement.classList.contains('dark')?'light':'dark')">Toggle theme</button>
-        <a href="#contact" class="btn-primary">Hire Me</a>
+<body class="bg-white text-black">
+  <!-- HEADER -->
+  <header class="sticky top-0 bg-white/80 backdrop-blur border-b border-zinc-200">
+    <nav class="container flex items-center justify-between h-14 text-sm">
+      <a href="#" class="font-semibold">Srikanth Kasula</a>
+      <div class="hidden md:flex gap-6">
+        <a class="hover:opacity-70" href="#work">Work</a>
+        <a class="hover:opacity-70" href="#about">About</a>
+        <a class="hover:opacity-70" href="#contact">Contact</a>
       </div>
-    </div>
+      <a class="hidden md:inline link" href="./Srikanth_Kasula_FranklinCovey.pdf" target="_blank" rel="noopener">Resume</a>
+    </nav>
   </header>
 
   <!-- HERO -->
-  <section id="home" class="relative overflow-hidden">
-    <div class="absolute inset-0 -z-10 opacity-60">
-      <div class="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-indigo-300 blur-3xl dark:bg-indigo-800"></div>
-      <div class="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-fuchsia-200 blur-3xl dark:bg-fuchsia-900"></div>
-    </div>
-    <div class="mx-auto max-w-7xl px-5 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
-      <div class="space-y-5">
-        <p class="text-xs font-semibold tracking-widest uppercase text-indigo-600">Available Remote • Dallas, TX</p>
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">I build scalable learning platforms with <span class="text-indigo-700 dark:text-indigo-400">Python/Django</span> & <span class="text-indigo-700 dark:text-indigo-400">React</span></h1>
-        <p class="text-slate-600 dark:text-slate-300">7+ years delivering secure, high‑performance products. Deep with complex data models, SQL optimization, APIs, privacy/security, and cloud‑native delivery using Terraform, Docker, and Kubernetes. Comfortable in writing‑first, collaborative cultures.</p>
-        <div class="flex flex-wrap gap-2">
-          <span class="chip">Python</span><span class="chip">Django</span><span class="chip">DRF</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">Terraform</span><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">AWS / Azure</span>
-        </div>
-        <div class="flex flex-wrap gap-3">
-          <a class="btn-primary" href="./Srikanth_Kasula_FranklinCovey.pdf" target="_blank">Download Resume (PDF)</a>
-          <a class="btn-ghost" href="#projects">View Projects</a>
-        </div>
-        <p class="text-xs text-slate-500 dark:text-slate-400">(Tip: place your latest tailored resume in the repo root with this exact filename.)</p>
+  <main class="container">
+    <section class="py-16 md:py-24">
+      <p class="text-xs tracking-widest uppercase text-zinc-500">Dallas • Remote • Full-Time</p>
+      <h1 class="mt-3 text-4xl md:text-6xl font-black leading-[1.05]">
+        Engineer who ships clean, fast products.
+      </h1>
+      <p class="mt-5 max-w-2xl text-zinc-700">
+        I design and build learning & enterprise platforms with <strong>Python/Django</strong> and
+        <strong>React/TypeScript</strong>. Comfortable with data modeling, SQL performance, security, and
+        cloud-native delivery (Terraform • Docker • K8s).
+      </p>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <span class="pill">Python</span><span class="pill">Django</span><span class="pill">DRF</span>
+        <span class="pill">React</span><span class="pill">TypeScript</span><span class="pill">PostgreSQL</span>
+        <span class="pill">Terraform</span><span class="pill">AWS</span><span class="pill">Kubernetes</span>
       </div>
-      <aside class="glass rounded-3xl p-6 md:p-8">
-        <p class="text-xs font-semibold tracking-widest uppercase text-indigo-500">Role Alignment</p>
-        <h3 class="mt-2 text-lg font-semibold">FranklinCovey – Full‑Stack Developer (Python/Django Focus)</h3>
-        <ul class="mt-3 list-disc pl-6 text-sm space-y-1 text-slate-700 dark:text-slate-300">
-          <li>Production Python/Django, React & TypeScript, SQL performance tuning</li>
-          <li>Tiered web architecture • APIs • security & privacy best practices</li>
-          <li>Terraform + containerized deployments on AWS/Azure</li>
-          <li>AI‑assisted development • writing‑first collaboration</li>
-        </ul>
-      </aside>
-    </div>
-  </section>
+    </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="mx-auto max-w-7xl px-5 py-16">
-    <div class="flex items-end justify-between gap-4">
-      <div>
-        <p class="text-xs font-semibold tracking-widest uppercase text-indigo-600">Selected Projects</p>
-        <h2 class="text-2xl md:text-3xl font-bold">Python/Django & React Work</h2>
+    <!-- WORK -->
+    <section id="work" class="py-12 border-t border-zinc-200">
+      <div class="flex items-end justify-between">
+        <h2 class="text-2xl md:text-3xl font-bold">Work</h2>
+        <a class="text-sm link" href="https://github.com/Srikasula" target="_blank" rel="noopener">All repos →</a>
       </div>
-      <a class="text-indigo-700 dark:text-indigo-400 hover:underline text-sm" target="_blank" href="https://github.com/Srikasula">See all on GitHub →</a>
-    </div>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-      <!-- Card 1 -->
-      <article class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">Impact Learning Platform (Demo)</h3>
-        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Multi‑tenant Django + React platform with RBAC, content localization, analytics, and progress tracking; emulates A/B learning modules.</p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs">
-          <span class="chip">Django</span><span class="chip">DRF</span><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">PostgreSQL</span><span class="chip">Redis</span>
-        </div>
-        <div class="mt-4 flex gap-3 text-sm">
-          <a class="text-indigo-700 dark:text-indigo-400 hover:underline" href="https://github.com/Srikasula/impact-learning-platform" target="_blank">Code</a>
-          <a class="text-indigo-700 dark:text-indigo-400 hover:underline" href="#" target="_blank">Live Demo</a>
-        </div>
-      </article>
+      <div class="mt-8 grid md:grid-cols-2 gap-6">
+        <article class="p-5 border border-zinc-200 rounded-xl hover:bg-zinc-50 transition">
+          <h3 class="font-semibold">Impact Learning Platform</h3>
+          <p class="mt-2 text-sm text-zinc-700">Multi-tenant Django + React app with RBAC, localization, analytics; optimized SQL and modular UI.</p>
+          <div class="mt-3 flex gap-4 text-sm">
+            <a class="link" href="https://github.com/Srikasula/impact-learning-platform" target="_blank">Code</a>
+            <a class="link opacity-70" href="#" target="_blank">Live</a>
+          </div>
+        </article>
 
-      <!-- Card 2 -->
-      <article class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">AI Coach & Content Recommender</h3>
-        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">FastAPI microservice that recommends next‑best learning assets using embeddings & RAG; integrates to Django via REST.</p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs">
-          <span class="chip">FastAPI</span><span class="chip">LangChain</span><span class="chip">PyTorch</span><span class="chip">OpenAI API</span><span class="chip">Docker</span>
-        </div>
-        <div class="mt-4 flex gap-3 text-sm">
-          <a class="text-indigo-700 dark:text-indigo-400 hover:underline" href="https://github.com/Srikasula/ai-coach-recommender" target="_blank">Code</a>
-          <a class="text-indigo-700 dark:text-indigo-400 hover:underline" href="#" target="_blank">API Docs</a>
-        </div>
-      </article>
+        <article class="p-5 border border-zinc-200 rounded-xl hover:bg-zinc-50 transition">
+          <h3 class="font-semibold">AI Coach & Recommender</h3>
+          <p class="mt-2 text-sm text-zinc-700">FastAPI + embeddings/RAG; integrates with Django via REST; Dockerized, K8s-ready.</p>
+          <div class="mt-3 flex gap-4 text-sm">
+            <a class="link" href="https://github.com/Srikasula/ai-coach-recommender" target="_blank">Code</a>
+            <a class="link opacity-70" href="#" target="_blank">API Docs</a>
+          </div>
+        </article>
 
-      <!-- Card 3 -->
-      <article class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">Subscriptions & Billing (Stripe)</h3>
-        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Refactored legacy monolith into Django services handling subscriptions, invoices & webhooks with idempotent processing.</p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs">
-          <span class="chip">Django</span><span class="chip">Stripe</span><span class="chip">Celery</span><span class="chip">PostgreSQL</span><span class="chip">Grafana</span>
-        </div>
-        <div class="mt-4"><a class="text-indigo-700 dark:text-indigo-400 hover:underline text-sm" href="https://github.com/Srikasula/django-subscriptions-stripe" target="_blank">Code</a></div>
-      </article>
+        <article class="p-5 border border-zinc-200 rounded-xl hover:bg-zinc-50 transition">
+          <h3 class="font-semibold">Subscriptions & Billing</h3>
+          <p class="mt-2 text-sm text-zinc-700">Idempotent Stripe webhooks, retries & ledgering; metrics with Prometheus/Grafana.</p>
+          <div class="mt-3 flex gap-4 text-sm">
+            <a class="link" href="https://github.com/Srikasula/django-subscriptions-stripe" target="_blank">Code</a>
+          </div>
+        </article>
 
-      <!-- Card 4 -->
-      <article class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">IaC & Platform Ops</h3>
-        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">Terraform modules for VPC, RDS, ECS/EKS; GitHub Actions with blue/green deploys for Django + React; policy‑as‑code guardrails.</p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs">
-          <span class="chip">Terraform</span><span class="chip">AWS</span><span class="chip">GitHub Actions</span><span class="chip">Docker</span><span class="chip">Kubernetes</span>
-        </div>
-        <div class="mt-4 flex gap-3 text-sm">
-          <a class="text-indigo-700 dark:text-indigo-400 hover:underline" href="https://github.com/Srikasula/infra-terraform-modules" target="_blank">Code</a>
-          <a class="text-indigo-700 dark:text-indigo-400 hover:underline" href="https://github.com/Srikasula" target="_blank">More on GitHub</a>
-        </div>
-      </article>
-
-      <!-- Card 5 (optional placeholder) -->
-      <article class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">Realtime Analytics Dashboard</h3>
-        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">React/TypeScript dashboard consuming Django APIs with server‑sent events for live updates and role‑aware widgets.</p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs">
-          <span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">SSE</span><span class="chip">DRF</span>
-        </div>
-        <div class="mt-4"><a class="text-indigo-700 dark:text-indigo-400 hover:underline text-sm" href="#" target="_blank">Code</a></div>
-      </article>
-
-      <!-- Card 6 (optional placeholder) -->
-      <article class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">Auth & Privacy Hardening</h3>
-        <p class="mt-1 text-sm text-slate-600 dark:text-slate-300">OAuth2/JWT/SAML federation, audit trails, PII encryption at rest, and rate‑limiting for high‑trust learning environments.</p>
-        <div class="mt-3 flex flex-wrap gap-2 text-xs">
-          <span class="chip">OAuth2</span><span class="chip">JWT</span><span class="chip">SAML</span><span class="chip">OWASP</span>
-        </div>
-        <div class="mt-4"><a class="text-indigo-700 dark:text-indigo-400 hover:underline text-sm" href="#" target="_blank">Notes</a></div>
-      </article>
-    </div>
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills" class="mx-auto max-w-7xl px-5 pb-16">
-    <div class="grid md:grid-cols-3 gap-6">
-      <div class="glass rounded-2xl p-6">
-        <p class="text-xs font-semibold tracking-widest uppercase text-indigo-500">Backend</p>
-        <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
-          <li>Python (Django, DRF, FastAPI, Celery), GraphQL/REST</li>
-          <li>SQL design & tuning • migrations • data modeling</li>
-          <li>Event‑driven • WebSockets/SSE</li>
-        </ul>
+        <article class="p-5 border border-zinc-200 rounded-xl hover:bg-zinc-50 transition">
+          <h3 class="font-semibold">Infra as Code Starter</h3>
+          <p class="mt-2 text-sm text-zinc-700">Terraform modules (VPC, RDS, EKS) + GitHub Actions blue/green deploys.</p>
+          <div class="mt-3 flex gap-4 text-sm">
+            <a class="link" href="https://github.com/Srikasula/infra-terraform-modules" target="_blank">Code</a>
+          </div>
+        </article>
       </div>
-      <div class="glass rounded-2xl p-6">
-        <p class="text-xs font-semibold tracking-widest uppercase text-indigo-500">Frontend</p>
-        <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
-          <li>React + TypeScript • state management • a11y</li>
-          <li>Component systems • testing (Jest/Cypress)</li>
-          <li>Performance & UX optimization</li>
-        </ul>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <p class="text-xs font-semibold tracking-widest uppercase text-indigo-500">Cloud & DevOps</p>
-        <ul class="mt-3 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
-          <li>Terraform • Docker • Kubernetes</li>
-          <li>AWS (EKS/RDS/S3/CloudFront) • Azure</li>
-          <li>Observability (Prometheus/Grafana) • security & privacy</li>
-        </ul>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- EXPERIENCE (brief) -->
-  <section id="experience" class="mx-auto max-w-7xl px-5 pb-16">
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">Full‑Stack Python Developer – Verizon</h3>
-        <p class="text-sm text-slate-500">Nov 2024 – Present • Irving, TX</p>
-        <ul class="mt-2 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
-          <li>Django/FastAPI services; microservices refactor; K8s delivery</li>
-          <li>React/TypeScript dashboards; UX & performance gains</li>
-          <li>Terraform automation; platform reliability improvements</li>
-        </ul>
-      </div>
-      <div class="glass rounded-2xl p-6">
-        <h3 class="font-semibold">Full‑Stack Developer – American Express</h3>
-        <p class="text-sm text-slate-500">Oct 2023 – Oct 2024 • Phoenix, AZ</p>
-        <ul class="mt-2 text-sm list-disc pl-5 space-y-1 text-slate-700 dark:text-slate-300">
-          <li>Payments microservices; SSE/WebSockets for realtime updates</li>
-          <li>PCI DSS/HIPAA auth (OAuth2/JWT/SAML); SQL tuning</li>
-          <li>AWS CDK, Docker, K8s; 99.99% uptime</li>
-        </ul>
-      </div>
-    </div>
-    <p class="mt-4 text-sm text-slate-500">More details in the downloadable resume.</p>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="py-12 border-t border-zinc-200">
+      <h2 class="text-2xl md:text-3xl font-bold">About</h2>
+      <p class="mt-4 max-w-3xl text-zinc-700">
+        7+ years building production systems. I care about performance budgets, developer experience,
+        and clear writing. Previously at American Express; now shipping at Verizon.
+      </p>
+    </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="mx-auto max-w-7xl px-5 pb-20">
-    <div class="glass rounded-3xl p-6 md:p-8">
-      <div class="md:flex items-center justify-between gap-6">
-        <div>
-          <h3 class="text-xl font-semibold">Let’s build something impactful.</h3>
-          <p class="text-slate-600 dark:text-slate-300 mt-1">Open to Full‑Stack roles (Python/Django • React/TypeScript). Remote‑friendly.</p>
-        </div>
-        <div class="mt-4 md:mt-0 flex flex-wrap gap-2 text-sm">
-          <a class="chip hover:border-indigo-600" href="mailto:ksggoud2208@gmail.com">ksggoud2208@gmail.com</a>
-          <a class="chip hover:border-indigo-600" href="tel:+18455912608">+1 (845) 591‑2608</a>
-          <a class="chip hover:border-indigo-600" target="_blank" href="https://www.linkedin.com/in/srikanth-k-32581496">LinkedIn</a>
-          <a class="chip hover:border-indigo-600" target="_blank" href="https://github.com/Srikasula">GitHub</a>
-        </div>
+    <!-- CONTACT -->
+    <section id="contact" class="py-12 border-t border-zinc-200">
+      <h2 class="text-2xl md:text-3xl font-bold">Contact</h2>
+      <div class="mt-4 flex flex-wrap gap-3 text-sm">
+        <a class="link" href="mailto:ksggoud2208@gmail.com">ksggoud2208@gmail.com</a>
+        <a class="link" href="tel:+18455912608">+1 (845) 591-2608</a>
+        <a class="link" href="https://www.linkedin.com/in/srikanth-k-32581496" target="_blank">LinkedIn</a>
+        <a class="link" href="https://github.com/Srikasula" target="_blank">GitHub</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <footer class="mx-auto max-w-7xl px-5 pb-10 text-xs text-slate-500">
-    © <span id="year"></span> Srikanth Kasula • Built with Tailwind • Deployed on GitHub Pages
-  </footer>
+    <footer class="py-12 border-t border-zinc-200 text-xs text-zinc-600">
+      © <span id="year"></span> Srikanth Kasula
+    </footer>
+  </main>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear()</script>
 </body>
